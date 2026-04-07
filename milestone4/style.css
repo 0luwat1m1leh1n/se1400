@@ -23,7 +23,7 @@
 .header {
     grid-column: 1 / -1;
     background-color: rgba(255, 0, 0, 0.4);
-    height: 60px;
+    height: 80px;
 }
 
 /* HERO */
@@ -31,33 +31,33 @@
     grid-column: 1 / -1;
     grid-row: 2 / 3;
     background-color: rgba(255, 165, 0, 0.4);
-    height: 240px;
+    height: 260px;
 }
 
 /* FEATURED */
 .featured {
     grid-column: 2 / 8;
     background-color: rgba(255, 255, 0, 0.4);
-    height: 200px;
+    height: 220px;
 }
 
 /* ABOUT */
 .about {
     grid-column: 2 / 8;
     background-color: rgba(0, 128, 0, 0.4);
-    height: 150px;
+    height: 170px;
 }
 
 /* Contact */
 .contact {
     grid-column: 2 / 8;
     background-color: rgba(128, 0, 128, 0.4);
-    height: 120px;
+    height: 140px;
 }
 
 /* FOOTER (full width) */
 .footer {
     grid-column: 1 / -1;
     background-color: rgba(165, 42, 42, 0.5);
-    height: 100px;
+    height: 120px;
 }
