@@ -1,0 +1,305 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* GRID CONTAINER */
+.container {
+    display: grid;
+
+    grid-template-columns: 
+    minmax(0px, 1fr) 
+    repeat(6, minmax(0, 175px)) 
+    minmax(0px, 1fr);
+
+    column-gap: 20px;
+    background: #fff2f2;
+
+}
+
+/* HEADER */
+.header {
+    grid-column: 1 / -1;
+    background: #fff2f2;
+    padding: 10px 0;
+}
+
+.nav {
+    grid-column: 2 / 8;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+
+
+.logo {
+    height: 50px;
+    width: auto;
+}
+.menu {
+    display: flex;
+    gap: 25px;
+    list-style: none;
+}
+.menu li {
+    cursor: pointer;
+    position: relative;
+}
+
+.menu li:hover {
+    color: red;
+}
+
+/* Optional underline animation */
+.menu li::after {
+    content: "";
+    display: block;
+    width: 0;
+    height: 2px;
+    background: red;
+    margin: auto;
+    transition: width 0.3s ease;
+}
+
+.menu li:hover::after {
+    width: 100%;
+}
+/* HERO */
+.hero {
+    grid-column: 1 / -1;
+    height: 400px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    background: url("https://images.pexels.com/photos/13981699/pexels-photo-13981699.jpeg") center/cover no-repeat;
+    color: #fff2f2;
+}
+
+.hero-content {
+    max-width: 600px;
+}
+
+/* BUTTON */
+.button {
+    margin-top: 15px;
+    padding: 10px 20px;
+    background: red;
+    color: #fff2f2;
+    border: none;
+    cursor: pointer;
+    border-radius: 8px;
+}
+
+/* FEATURED */
+.featured {
+    grid-column: 2 / 8;
+    text-align: center;
+    padding: 40px 0;
+}
+
+.featured h2 {
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.cards {
+    display: flex;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.card {
+    flex: 1;
+
+}
+
+.card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.card h3 {
+    font-size: 16px;
+    font-weight: bold;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+/* CARD SUBTEXT */
+.card p {
+    font-size: 13px;
+    color: gray;
+    margin-top: 5px;
+}
+
+/* ABOUT */
+.about {
+    grid-column: 2 / 8;
+    text-align: center;
+    padding: 40px 20px;
+}
+
+/* CONTACT */
+.contact {
+    grid-column: 2 / 8;
+    text-align: center;
+    padding: 40px 20px;
+}
+
+/* FOOTER */
+.footer {
+    grid-column: 1 / -1;
+    text-align: right;
+    padding: 20px;
+    background: #333;
+    color: #fff2f2;
+}
+
+a, button, .card, .menu li, img {
+    transition: all 0.3s ease;
+}
+
+.button:hover {
+    background: darkred;
+    transform: translateY(-2px);
+}
+
+.card {
+    border-radius: 8px;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+}
+
+.card img {
+    transition: transform 0.4s ease;
+}
+
+.card:hover img {
+    transform: scale(1.05);
+}
+
+.hero .button:hover {
+    transform: scale(1.05);
+}
+/* Query */
+
+@media (max-width: 992px) {
+
+    /* Keep centered layout but tighter */
+    .container {
+        grid-template-columns: 
+            minmax(0px, 1fr) 
+            repeat(6, minmax(0, 120px)) 
+            minmax(0px, 1fr);
+    }
+
+    /* NAV: give breathing room */
+    .nav {
+        grid-column: 2 / 8;
+        padding: 0 10px;
+    }
+
+    .menu {
+        gap: 15px; /* reduce spacing slightly */
+        font-size: 14px;
+    }
+
+    /* HERO: scale down slightly */
+    .hero {
+        height: 320px;
+        padding: 20px;
+    }
+
+    .hero-content {
+        max-width: 500px;
+    }
+
+    /* CARDS: 2 per row instead of 3 */
+    .cards {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .card {
+        flex: 1 1 45%;
+        max-width: 45%;
+    }
+
+    /* Fix uneven spacing */
+    .featured {
+        padding: 30px 10px;
+    }
+
+    .about,
+    .contact {
+        padding: 30px 15px;
+    }
+}
+
+
+@media (max-width: 768px) {
+
+    .container {
+        grid-template-columns: 1fr;
+    }
+
+    /* Full width sections */
+    .nav,
+    .featured,
+    .about,
+    .contact {
+        grid-column: 1 / -1;
+    }
+
+    /* NAV LAYOUT */
+    .nav {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    /* Center logo */
+    .logo {
+        display: block;
+        margin: 0 auto;
+    }
+
+    /* Menu under logo, spread out */
+    .menu {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 15px;
+        text-align: center;
+    }
+
+    /* Stack cards */
+   .cards {
+        display: flex;
+        flex-direction: column;
+        align-items: center;   /* THIS centers the cards */
+        gap: 20px;
+    }
+
+    /* Give cards a nice centered width */
+    .card {
+        width: 90%;
+        max-width: 400px;  /* keeps them from getting too wide */
+    }
+
+    .footer {
+        text-align: center;
+    }
+}
