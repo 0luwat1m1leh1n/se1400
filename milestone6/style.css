@@ -4,7 +4,6 @@
     box-sizing: border-box;
 }
 
-/* GRID CONTAINER */
 .container {
     display: grid;
 
@@ -18,7 +17,6 @@
 
 }
 
-/* HEADER */
 .header {
     grid-column: 1 / -1;
     background: #fff2f2;
@@ -53,7 +51,7 @@
     color: red;
 }
 
-/* Optional underline animation */
+
 .menu li::after {
     content: "";
     display: block;
@@ -67,7 +65,6 @@
 .menu li:hover::after {
     width: 100%;
 }
-/* HERO */
 .hero {
     grid-column: 1 / -1;
     height: 400px;
@@ -85,7 +82,6 @@
     max-width: 600px;
 }
 
-/* BUTTON */
 .button {
     margin-top: 15px;
     padding: 10px 20px;
@@ -96,7 +92,6 @@
     border-radius: 8px;
 }
 
-/* FEATURED */
 .featured {
     grid-column: 2 / 8;
     text-align: center;
@@ -134,28 +129,24 @@
     margin-bottom: 10px;
 }
 
-/* CARD SUBTEXT */
 .card p {
     font-size: 13px;
     color: gray;
     margin-top: 5px;
 }
 
-/* ABOUT */
 .about {
     grid-column: 2 / 8;
     text-align: center;
     padding: 40px 20px;
 }
 
-/* CONTACT */
 .contact {
     grid-column: 2 / 8;
     text-align: center;
     padding: 40px 20px;
 }
 
-/* FOOTER */
 .footer {
     grid-column: 1 / -1;
     text-align: right;
@@ -186,18 +177,13 @@ a, button, .card, .menu li, img {
     transition: transform 0.4s ease;
 }
 
-.card:hover img {
-    transform: scale(1.05);
-}
 
 .hero .button:hover {
     transform: scale(1.05);
 }
-/* Query */
 
 @media (max-width: 992px) {
 
-    /* Keep centered layout but tighter */
     .container {
         grid-template-columns: 
             minmax(0px, 1fr) 
@@ -205,18 +191,16 @@ a, button, .card, .menu li, img {
             minmax(0px, 1fr);
     }
 
-    /* NAV: give breathing room */
     .nav {
         grid-column: 2 / 8;
         padding: 0 10px;
     }
 
     .menu {
-        gap: 15px; /* reduce spacing slightly */
+        gap: 15px; 
         font-size: 14px;
     }
 
-    /* HERO: scale down slightly */
     .hero {
         height: 320px;
         padding: 20px;
@@ -226,7 +210,6 @@ a, button, .card, .menu li, img {
         max-width: 500px;
     }
 
-    /* CARDS: 2 per row instead of 3 */
     .cards {
         flex-wrap: wrap;
         justify-content: center;
@@ -237,7 +220,6 @@ a, button, .card, .menu li, img {
         max-width: 45%;
     }
 
-    /* Fix uneven spacing */
     .featured {
         padding: 30px 10px;
     }
@@ -255,7 +237,6 @@ a, button, .card, .menu li, img {
         grid-template-columns: 1fr;
     }
 
-    /* Full width sections */
     .nav,
     .featured,
     .about,
@@ -263,20 +244,17 @@ a, button, .card, .menu li, img {
         grid-column: 1 / -1;
     }
 
-    /* NAV LAYOUT */
     .nav {
         flex-direction: column;
         align-items: center;
         gap: 10px;
     }
 
-    /* Center logo */
     .logo {
         display: block;
         margin: 0 auto;
     }
 
-    /* Menu under logo, spread out */
     .menu {
         display: flex;
         justify-content: center;
@@ -285,18 +263,16 @@ a, button, .card, .menu li, img {
         text-align: center;
     }
 
-    /* Stack cards */
    .cards {
         display: flex;
         flex-direction: column;
-        align-items: center;   /* THIS centers the cards */
+        align-items: center;   
         gap: 20px;
     }
 
-    /* Give cards a nice centered width */
     .card {
         width: 90%;
-        max-width: 400px;  /* keeps them from getting too wide */
+        max-width: 400px;  
     }
 
     .footer {
