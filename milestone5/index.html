@@ -12,71 +12,96 @@
 
 <main class="container">
 
-    <!-- HEADER -->
     <header class="header">
-        <nav class="nav">
+        <nav class="navbar">
             <img src="Images/logo.jpg" alt="Logo" class="logo">
 
             <ul class="menu">
-                <li>Home</li>
-                <li>Portfolio</li>
-                <li>About</li>
-                <li>Contact</li>
-                <li>Resume</li>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="#resume">Resume</a></li>
             </ul>
         </nav>
     </header>
 
-    <!-- HERO -->
-    <section class="hero">
+    <section class="hero" id="home">
         <div class="hero-content">
             <h1>Olu Design Studio</h1>
             <p>Modern architectural design focused on functionality and aesthetics</p>
-            <button class="button">View Portfolio</button>
+            <button class="button" onclick="location.href='#portfolio'">View Portfolio</button>
         </div>
     </section>
 
-    <!-- FEATURED -->
-    <section class="featured">
+    <section class="featured" id="portfolio">
         <h2>Portfolio</h2>
 
         <div class="cards">
             <div class="card">
-                <img src="https://images.pexels.com/photos/8134846/pexels-photo-8134846.jpeg" alt="">
-                <h3>Modern Residential Home</h3>
-                <p>Contemporary House Design</p>
+                <img src="Images/Screenshot 2026-04-27 at 1.14.25 pm.png">
+                <h3>Existing Building Analysis</h3>
+                <p>Hand-drafted studies of structure and spatial organization.</p>
             </div>
 
             <div class="card">
-                <img src="https://images.pexels.com/photos/269077/pexels-photo-269077.jpeg" alt="">
-                <h3>Urban Office Building</h3>
-                <p>Sleek Commercial Space</p>
+                <img src="Images/Screenshot 2026-04-27 at 1.14.49 pm.png">
+                <h3>Midterm Drawings</h3>
+                <p>Plans, sections, and elevations for spatial development.</p>
             </div>
 
             <div class="card">
-                <img src="https://images.pexels.com/photos/1438832/pexels-photo-1438832.jpeg" alt="">
-                <h3>Lakeside Villa</h3>
-                <p>Luxury Waterfront Property</p>
+                <img src="Images/Screenshot 2026-04-27 at 1.15.22 pm.png">
+                <h3>Final Design</h3>
+                <p>CAD-based final presentation and perspective work.</p>
             </div>
         </div>
     </section>
 
-    <!-- ABOUT -->
-    <section class="about">
-        <h2>About Olu Designs</h2>
+    <section class="about" id="about">
+        <h2>About Me</h2>
+
+        <p class="left">Name: Olu Olubisi</p>
+        <p class="left">Email: oluolubisids@gmail.com</p>
+        <p class="left">Location: Portland, OR</p>
+
+        <p class="left">Education:</p>
+        <ul>
+            <li>B.S. in Architecture, Portland State University</li>
+            <li>Expected graduation: June 2028</li>
+            <li>Undergraduate student, year 2</li>
+        </ul>
+
+        <p class="left">Profile:</p>
         <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            Emerging architectural design student with an interest in sustainable and thoughtful design.
+            Focused on improving spatial organization, model-making, and digital representation.
         </p>
-        <button class="button">Learn More</button>
     </section>
 
-    <!-- CONTACT -->
-    <section class="contact">
+    <section class="about" id="resume">
+        <h2>Resume</h2>
+
+        <p><strong>Skills:</strong></p>
+        <ul>
+            <li>Hand Drafting</li>
+            <li>CAD Design</li>
+            <li>Model Making</li>
+        </ul>
+
+        <p><strong>Experience:</strong></p>
+        <p>
+            Completed multiple architecture studio projects involving concept development,
+            drafting, and final presentation work.
+        </p>
+    </section>
+
+    <section class="contact" id="contact">
         <h2>Interested in working together?</h2>
+        <p>Email: tommie.olubisi@gmail.com</p>
         <button class="button">Contact</button>
     </section>
 
-    <!-- FOOTER -->
     <footer class="footer">
         <p>tommie.olubisi@gmail.com</p>
         <p>Follow us: olu_design_studio</p>
